@@ -1,7 +1,8 @@
 export enum Screens{
     LOGIN='Login',
-    HOME='Home',
+    HOME='Subir foto',
     REGISTER='Register',
-    CAMERA='Camera',
-    IMAGE_PREVIEW='ImagePreview'
+    PHOTO_LIST='Votar foto',
+    NICE_PHOTOS='Fotos lindas',
+    MESSY_PHOTOS='Fotos feas'
 }

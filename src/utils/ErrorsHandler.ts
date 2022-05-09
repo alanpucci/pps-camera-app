@@ -14,6 +14,9 @@ export const errorHandler = (error) => {
         case 'auth/user-not-found':
             showMessage({type:"danger", message:"Error", description:"Email y/o contraseña inválido"});
         break;
+        case 'image-error':
+            showMessage({type:"danger", message:"Error", description:"Ha ocurrido un error al subir la foto"});
+        break;
         default:
             showMessage({type:"danger", message:"Error", description:"Ha ocurrido un error, por favor reintente nuevamente"});
         break;
