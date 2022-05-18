@@ -6,6 +6,8 @@ import { handleLogout } from '../../redux/authReducer';
 import HomeStack from './HomeStack';
 import { createStackNavigator } from '@react-navigation/stack';
 import PhotoListStack from './PhotoListStack';
+import ByMeScreen from '../../components/screens/ByMeScreen/ByMeScreen.component';
+import ChartsScreen from '../../components/screens/ChartsScreen/ChartsScreen.component';
 
 const CustomDrawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -36,6 +38,8 @@ const Drawer = () => {
     <CustomDrawer.Navigator initialRouteName={Screens.HOME} drawerContent={props => <CustomDrawerContent {...props} />}>
       <CustomDrawer.Screen name={Screens.HOME} component={HomeStack} options={{headerShown:false}} />
       <CustomDrawer.Screen name={Screens.PHOTO_LIST} component={PhotoListStack}  options={{headerShown:false}} />
+      <CustomDrawer.Screen name={Screens.CHARTS} component={ChartsScreen} />
+      <CustomDrawer.Screen name={Screens.BY_ME} component={ByMeScreen} />
     </CustomDrawer.Navigator>
   );
 }

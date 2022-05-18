@@ -46,7 +46,7 @@ const LoginScreen:FC<LoginScreenProps> = ({navigation}) => {
 	return (
 		<StyledView>
             {data.loading && <Spinner />}
-            <Logo title="Camara" />
+            <Logo title="Cámara" />
             <LoginController fastSignIn={handleFastSignIn} handleSubmit={handleSubmit(handleSignIn)} handleRegister={handleRegister} control={control} />
         </StyledView>
 	);

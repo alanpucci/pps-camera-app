@@ -19,12 +19,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 const NiceListScreen = () => {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState<any>([]);
-    const [votes, setVotes] = useState<any>([]);
     const userData:any = useSelector<any>(store => store.auth);
-
-    useEffect(() => {
-        const actualVotes = Object.values(votes);
-    },[votes])
 
     useFocusEffect(
         useCallback(() => {
@@ -39,7 +34,6 @@ const NiceListScreen = () => {
                 querySnapshot.forEach(async (doc) => {
                     const res:any = {...doc.data(), id:doc.id};
                     const imageUrl = await getDownloadURL(ref(storage, res.image));
-                    // setVotes(arr => [...arr, {[doc.id]:res.votes}]);
                     const voted = res.votes.some(vote => vote === userData.user.email);
                     setData(arr => [...arr, {...res, id:doc.id, imageUrl: imageUrl, voted}]);
                 });

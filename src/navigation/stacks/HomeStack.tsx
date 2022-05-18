@@ -11,7 +11,7 @@ const HomeStack = () => {
   return (
     <Stack.Navigator initialRouteName={Screens.HOME} screenOptions={({navigation}) => ({
       headerLeft:()=><TouchableOpacity style={{marginHorizontal:14}}
-        onPress={() => navigation.openDrawer()}>
+        onPress={() => {navigation.openDrawer();console.log('abierto')}}>
           <Feather name="menu" size={24} color="black" />
         </TouchableOpacity>
     })}>

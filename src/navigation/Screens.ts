@@ -4,5 +4,7 @@ export enum Screens{
     REGISTER='Register',
     PHOTO_LIST='Votar foto',
     NICE_PHOTOS='Fotos lindas',
-    MESSY_PHOTOS='Fotos feas'
+    MESSY_PHOTOS='Fotos feas',
+    CHARTS="Gráficos",
+    BY_ME="Subidas por mi"
 }

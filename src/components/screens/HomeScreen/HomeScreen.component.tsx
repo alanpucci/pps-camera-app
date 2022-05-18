@@ -27,19 +27,6 @@ const HomeScreen = () => {
     }, []);
 
     const uploadImage = async (image) => {
-        // const blob: any = await new Promise((resolve, reject) => {
-        //     const xhr = new XMLHttpRequest();
-        //     xhr.onload = function () {
-        //         resolve(xhr.response);
-        //     };
-        //     xhr.onerror = function (e) {
-        //         console.log(e);
-        //         reject(new TypeError("Network request failed"));
-        //     };
-        //     xhr.responseType = "blob";
-        //     xhr.open("GET", image, true);
-        //     xhr.send(null);
-        // });
         setLoading(true);
         try {
             const blob:any = await getBlob(image);

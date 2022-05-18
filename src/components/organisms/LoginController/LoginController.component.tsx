@@ -20,8 +20,8 @@ const LoginController:FC<LoginControllerProps> = ({control,handleSubmit, handleR
   return (
     <StyledView >
       <View>
-        <ControlledInput autoCapitalize='sentences' name="email" placeholder='Email' control={control} />
-        <ControlledPasswordInput autoCapitalize='none' name="password" placeholder='Password' control={control} />
+        <ControlledInput autoCapitalize='sentences' name="email" placeholder='Correo electrónico' control={control} />
+        <ControlledPasswordInput autoCapitalize='none' name="password" placeholder='Contraseña' control={control} />
         <Button size='full' rounded onPress={handleSubmit}>Ingresar</Button>
         <Button variant='tertiary' size='xl' onPress={handleRegister}>Crear cuenta</Button>
       </View>
